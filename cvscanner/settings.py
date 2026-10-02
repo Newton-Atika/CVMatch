@@ -148,3 +148,13 @@ PAYSTACK_PLAN_DAYS=30
 
 LOGIN_URL = "login"
 LOGIN_REDIRECT_URL = "/account/dashboard/"
+
+
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
